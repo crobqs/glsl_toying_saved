@@ -1,0 +1,15 @@
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+uniform float u_time;
+
+void main() {
+	vec2 st = gl_FragCoord.xy/u_resolution;
+    vec2 mouse = u_mouse / u_resolution;
+    float dist = distance(st, mouse);
+    float brightness = 1.0 - smoothstep(0.0, 0.5, dist);
+	gl_FragColor = vec4(vec3(brightness),1.0);
+}
