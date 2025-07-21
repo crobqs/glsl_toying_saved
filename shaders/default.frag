@@ -4,7 +4,7 @@ uniform float time;
 uniform vec2 resolution;
 uniform vec2 mpos;
 uniform float clickTime;
-unfiorm vec2 clickPos;
+uniform vec2 clickPos;
 
 out vec4 FragColor;
 
